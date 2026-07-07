@@ -13,6 +13,8 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import FAQ from './pages/FAQ';
 import BookDetail from './pages/BookDetail';
+import Checkout from './pages/Checkout';
+import OrderSuccess from './pages/OrderSuccess';
 import { ShopProvider } from './context/ShopContext';
 import LoginModal from './components/LoginModal';
 import ScrollToTop from './components/ScrollToTop';
@@ -36,6 +38,8 @@ function App() {
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/book/:id" element={<BookDetail />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/order-success" element={<OrderSuccess />} />
             </Routes>
           </main>
           <Footer />

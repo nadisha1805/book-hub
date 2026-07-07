@@ -1,12 +1,21 @@
 import React from 'react';
 import { useShop } from '../context/ShopContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, ShoppingBag } from 'lucide-react';
 import SEO from '../components/SEO';
 import './Cart.css';
 
 const Cart = () => {
   const { cart, cartTotal, removeFromCart, updateQuantity, clearCart } = useShop();
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    if (cart.length > 0) {
+      navigate('/checkout');
+    } else {
+      alert("Your cart is empty. Please add items before proceeding to checkout.");
+    }
+  };
 
   if (cart.length === 0) {
     return (
@@ -67,7 +76,7 @@ const Cart = () => {
             <span>Total</span>
             <span>${cartTotal.toFixed(2)}</span>
           </div>
-          <button className="btn btn-primary checkout-btn" onClick={() => alert('Checkout not implemented')}>
+          <button className="btn btn-primary checkout-btn" onClick={handleCheckout}>
             Proceed to Checkout
           </button>
         </div>
