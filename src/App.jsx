@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,10 +17,11 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <ShopProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="app">
+    <HelmetProvider>
+      <ShopProvider>
+        <Router>
+          <ScrollToTop />
+          <div className="app">
           <Navbar />
           <main className="main-content">
             <Routes>
@@ -36,7 +38,8 @@ function App() {
           <LoginModal />
         </div>
       </Router>
-    </ShopProvider>
+      </ShopProvider>
+    </HelmetProvider>
   );
 }
 

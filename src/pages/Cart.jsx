@@ -2,6 +2,7 @@ import React from 'react';
 import { useShop } from '../context/ShopContext';
 import { Link } from 'react-router-dom';
 import { Trash2, ShoppingBag } from 'lucide-react';
+import SEO from '../components/SEO';
 import './Cart.css';
 
 const Cart = () => {
@@ -10,6 +11,7 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <div className="cart-empty container">
+        <SEO title="Your Cart" description="View items in your Book Hub shopping cart." />
         <ShoppingBag size={64} className="empty-icon" />
         <h2>Your cart is empty</h2>
         <p>Looks like you haven't added anything yet.</p>
@@ -20,6 +22,7 @@ const Cart = () => {
 
   return (
     <div className="cart-page container">
+      <SEO title="Your Cart" description="View items in your Book Hub shopping cart." />
       <h1>Shopping Cart</h1>
       <div className="cart-content">
         <div className="cart-items">

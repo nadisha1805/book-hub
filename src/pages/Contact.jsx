@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import SEO from '../components/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -14,6 +14,10 @@ const Contact = () => {
 
   return (
     <div className="contact-page container">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with the Book Hub team for support, inquiries, or feedback." 
+      />
       <div className="contact-header">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you. Please fill out this form or get in touch using the details below.</p>

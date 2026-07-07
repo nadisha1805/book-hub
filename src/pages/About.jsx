@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Users, Building, Shield } from 'lucide-react';
+import SEO from '../components/SEO';
 import './About.css';
 
 const About = () => {
   return (
     <div className="about-page">
+      <SEO 
+        title="About Us" 
+        description="Learn about Book Hub's mission to connect stories with readers around the world." 
+      />
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>Our Story</h1>

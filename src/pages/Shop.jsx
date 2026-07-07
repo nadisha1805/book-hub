@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { books, categories } from '../data/mockData';
 import BookCard from '../components/BookCard';
+import SEO from '../components/SEO';
 import './Shop.css';
 
 const Shop = () => {
@@ -64,13 +65,17 @@ const Shop = () => {
 
   return (
     <div className="shop-page container">
+      <SEO 
+        title="Shop Books" 
+        description="Browse our extensive collection of fiction, non-fiction, business, and technology books." 
+      />
       <div className="shop-header">
         <h1>{initialQuery ? `Search Results for "${initialQuery}"` : initialFilter === 'bestsellers' ? 'Best Sellers' : 'All Books'}</h1>
         <div className="shop-controls">
           <p>Showing {filteredBooks.length > 0 ? (currentPage - 1) * itemsPerPage + 1 : 0}-{Math.min(currentPage * itemsPerPage, filteredBooks.length)} of {filteredBooks.length} results</p>
           <div className="sort-dropdown">
-            <span>Sort by:</span>
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <label htmlFor="sort-select">Sort by:</label>
+            <select id="sort-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
               <option value="default">Default</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -85,6 +90,7 @@ const Shop = () => {
           <div className="filter-group">
             <h3>Category</h3>
             <select 
+              id="category-select"
               className="category-dropdown" 
               value={selectedCategory} 
               onChange={(e) => {
@@ -102,11 +108,11 @@ const Shop = () => {
           <div className="filter-group">
             <h3>Price Range</h3>
             <div className="price-inputs">
-              <input type="number" placeholder="Min" value={minPrice} onChange={e => setMinPrice(e.target.value)} />
+              <input type="number" id="min-price-input" placeholder="Min" value={minPrice} onChange={e => setMinPrice(e.target.value)} />
               <span>-</span>
-              <input type="number" placeholder="Max" value={maxPrice} onChange={e => setMaxPrice(e.target.value)} />
+              <input type="number" id="max-price-input" placeholder="Max" value={maxPrice} onChange={e => setMaxPrice(e.target.value)} />
             </div>
-            <button className="btn btn-outline filter-btn" onClick={() => setCurrentPage(1)}>Apply</button>
+            <button id="apply-price-filter-btn" className="btn btn-outline filter-btn" onClick={() => setCurrentPage(1)}>Apply</button>
           </div>
 
           <div className="filter-group">

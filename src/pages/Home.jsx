@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Truck, ShieldCheck, BookOpen, Star } from 'lucide-react';
-import { books, categories, authors } from '../data/mockData';
+import { books, categories } from '../data/mockData';
 import BookCard from '../components/BookCard';
 import CategoryCard from '../components/CategoryCard';
+import SEO from '../components/SEO';
 import './Home.css';
 
 const Home = () => {
@@ -13,7 +14,6 @@ const Home = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   const bestSellers = books.filter(book => book.isBestSeller).slice(0, 4);
-  const newArrivals = books.filter(book => book.isNewArrival);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -33,18 +33,23 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="Home" 
+        description="Discover your next great read at Book Hub. Browse bestsellers, new arrivals, and top categories." 
+      />
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Discover Your Next Great Read</h1>
+            <h1 className="hero-title">Discover Your <span>Great Read</span></h1>
             <p className="hero-description">
-              Explore thousands of books across all genres. From gripping thrillers to insightful non-fiction, we have something for every reader.
+              Immerse yourself in thousands of stories across every genre. Your premium destination for the world's best books.
             </p>
             <div className="hero-actions">
-              <Link to="/shop" className="btn btn-primary">
-                Explore Books <ArrowRight size={18} />
+              <Link to="/shop" className="btn btn-primary" id="hero-shop-btn">
+                Shop Now <ArrowRight size={18} />
               </Link>
+              <Link to="/categories" className="btn btn-outline" id="hero-categories-btn">Explore Categories</Link>
             </div>
           </div>
           <div className="hero-image-container">
@@ -103,7 +108,7 @@ const Home = () => {
         <div className="container">
           <div className="section-header">
             <h2>Best Sellers</h2>
-            <Link to="/shop?filter=bestsellers" className="view-all-link">View All Best Sellers <ArrowRight size={16} /></Link>
+            <Link to="/shop?filter=bestsellers" className="view-all-link" id="view-all-bestsellers-btn">View All Best Sellers <ArrowRight size={16} /></Link>
           </div>
           <div className="books-grid">
             {bestSellers.map(book => (
@@ -125,10 +130,11 @@ const Home = () => {
               type="email" 
               placeholder="Enter your email address" 
               required 
+              id="newsletter-email-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit" className="btn btn-primary" style={{backgroundColor: subscribed ? '#2A9D8F' : ''}}>
+            <button type="submit" className="btn btn-primary" id="newsletter-subscribe-btn" style={{backgroundColor: subscribed ? '#2A9D8F' : ''}}>
               {subscribed ? 'Subscribed!' : 'Subscribe'}
             </button>
           </form>
