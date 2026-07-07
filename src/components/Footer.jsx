@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-col">
           <div className="footer-logo">
-            <h2>BOOK <span>HUB</span></h2>
+            <img src="/images/logo.jpg" alt="Book Hub Logo" className="logo-img" />
             <p>Where stories connect. Your premium destination for the world's best books.</p>
           </div>
           <div className="social-icons">

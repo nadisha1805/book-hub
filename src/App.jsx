@@ -12,11 +12,13 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import { ShopProvider } from './context/ShopContext';
 import LoginModal from './components/LoginModal';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <ShopProvider>
       <Router>
+        <ScrollToTop />
         <div className="app">
           <Navbar />
           <main className="main-content">

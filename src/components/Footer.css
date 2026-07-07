@@ -17,13 +17,11 @@
   margin-bottom: 1.5rem;
 }
 
-.footer-logo h2 {
-  color: var(--white);
-  margin-bottom: 0.5rem;
-}
-
-.footer-logo span {
-  color: var(--accent-color);
+.footer-logo .logo-img {
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .footer-logo p {

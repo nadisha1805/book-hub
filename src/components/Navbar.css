@@ -19,16 +19,10 @@
   justify-content: center;
 }
 
-.navbar-logo h2 {
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--primary-color);
-  letter-spacing: 1px;
-}
-
-.navbar-logo span:not(.logo-tagline) {
-  color: var(--accent-color);
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 2px;
 }
 
 .logo-tagline {
