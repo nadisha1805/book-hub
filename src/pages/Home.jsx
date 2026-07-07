@@ -117,6 +117,8 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
+
       {/* Our Published Books Section */}
       <section className="section-padding bg-light">
         <div className="container">
