@@ -58,7 +58,6 @@ const Navbar = () => {
             </form>
           ) : (
             <>
-              {/* Milestone 2 Features - Commented out for now
               <button className="icon-btn" aria-label="Search" onClick={() => setIsSearchOpen(true)}>
                 <Search size={20} />
               </button>
@@ -83,7 +82,6 @@ const Navbar = () => {
               ) : (
                 <button className="icon-btn login-btn" onClick={openLoginModal}>Login</button>
               )}
-              */}
             </>
           )}
           
