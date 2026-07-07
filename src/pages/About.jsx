@@ -1,69 +1,73 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, Users, Building, Shield } from 'lucide-react';
+import { BookOpen, Users, Truck, ShieldCheck } from 'lucide-react';
 import SEO from '../components/SEO';
 import './About.css';
 
 const About = () => {
   return (
     <div className="about-page">
-      <SEO 
-        title="About Us" 
-        description="Learn about Book Hub's mission to connect stories with readers around the world." 
-      />
-      <section className="about-hero">
-        <div className="about-hero-content">
-          <h1>Our Story</h1>
-          <p>Connecting readers with their next great adventure since 2024.</p>
+      <SEO title="About Us" description="Learn about Book Hub's story, mission, and why we're the best place to buy books online." />
+      
+      <div className="about-hero">
+        <div className="container about-hero-container">
+          <div className="about-hero-content">
+            <h1>Our Story</h1>
+            <p>Connecting readers with their next favorite book since 2015. We believe in the magic of stories and the power of knowledge.</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section className="about-content container">
-        <div className="about-grid">
+      <div className="container">
+        <section className="about-section story-section">
           <div className="about-text">
-            <h2>Our Mission</h2>
-            <p>At Book Hub, we believe that books have the power to change lives. Our mission is to make the world's best literature accessible to everyone, everywhere. We curate a premium selection of books spanning all genres, from timeless classics to modern masterpieces.</p>
-            
-            <h2>Our Vision</h2>
-            <p>We envision a world where every individual has the opportunity to explore new ideas, empathize with different perspectives, and expand their horizons through the joy of reading. We strive to be more than just a bookstore; we aim to be a community for book lovers.</p>
+            <h2>The Book Hub Journey</h2>
+            <p>What started as a small local bookstore has grown into a global community of readers. Book Hub was founded on a simple premise: everyone should have access to great literature, regardless of where they live.</p>
+            <p>Today, we stock over 10,000 titles across all genres. Our dedicated team of bibliophiles works tirelessly to curate the best collections, from timeless classics to modern bestsellers.</p>
           </div>
           <div className="about-image">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800" alt="Library" />
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=800" alt="Library interior" />
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="about-stats bg-light">
-        <div className="container stats-container">
-          <div className="stat-card">
-            <BookOpen size={40} className="stat-icon" />
-            <h3>10,000+</h3>
-            <p>Books Available</p>
+        <section className="about-section mission-section">
+          <div className="about-image">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800" alt="Person reading" />
           </div>
-          <div className="stat-card">
-            <Users size={40} className="stat-icon" />
-            <h3>2,500+</h3>
-            <p>Happy Readers</p>
+          <div className="about-text">
+            <h2>Our Mission & Vision</h2>
+            <h3>The Mission</h3>
+            <p>To foster a lifelong love of reading by providing a vast, accessible, and affordable collection of books to readers worldwide.</p>
+            <h3>The Vision</h3>
+            <p>We envision a world where stories connect us all. We aim to be the most trusted and beloved platform for book discovery, empowering authors and inspiring readers in every corner of the globe.</p>
           </div>
-          <div className="stat-card">
-            <Building size={40} className="stat-icon" />
-            <h3>50+</h3>
-            <p>Publishers</p>
-          </div>
-          <div className="stat-card">
-            <Shield size={40} className="stat-icon" />
-            <h3>100%</h3>
-            <p>Secure Shopping</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="about-cta">
-        <div className="container">
-          <h2>Ready to find your next book?</h2>
-          <Link to="/shop" className="btn btn-primary">Explore Our Collection</Link>
-        </div>
-      </section>
+        <section className="why-choose-us-section">
+          <h2 className="section-title">Why Choose Book Hub</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon-wrapper"><BookOpen size={32} /></div>
+              <h3>Massive Collection</h3>
+              <p>Explore thousands of books across every imaginable genre, from indie authors to international bestsellers.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon-wrapper"><Users size={32} /></div>
+              <h3>Customer Satisfaction</h3>
+              <p>Our dedicated support team is here 24/7 to ensure your reading journey is perfectly smooth.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon-wrapper"><Truck size={32} /></div>
+              <h3>Fast Delivery</h3>
+              <p>We partner with top logistics companies to ensure your books arrive quickly and safely at your doorstep.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon-wrapper"><ShieldCheck size={32} /></div>
+              <h3>Secure Payments</h3>
+              <p>Your transactions are 100% secure with our encrypted, industry-standard payment gateways.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

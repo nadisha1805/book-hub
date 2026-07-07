@@ -28,22 +28,34 @@ const Footer = () => {
         </div>
         
         <div className="footer-col">
-          <h3>Quick Links</h3>
+          <h3>Customer Service</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/shipping-policy">Shipping Policy</Link></li>
+            <li><Link to="/return-policy">Return & Refund Policy</Link></li>
+            <li><Link to="/cancellation-policy">Cancellation Policy</Link></li>
+            <li><Link to="/track-order">Track Order</Link></li>
           </ul>
         </div>
         
         <div className="footer-col">
-          <h3>Categories</h3>
+          <h3>Company</h3>
           <ul>
-            <li><Link to="/shop">Fiction</Link></li>
-            <li><Link to="/shop">Non-Fiction</Link></li>
-            <li><Link to="/shop">Business</Link></li>
-            <li><Link to="/shop">Technology</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link to="/terms">Terms of Service</Link></li>
+          </ul>
+        </div>
+        
+        <div className="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/shop">Shop</Link></li>
+            <li><Link to="/shop?filter=categories">Categories</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
+            <li><button className="footer-btn-link" onClick={() => document.querySelector('.login-btn')?.click()}>Login/Register</button></li>
           </ul>
         </div>
         

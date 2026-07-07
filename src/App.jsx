@@ -15,6 +15,13 @@ import FAQ from './pages/FAQ';
 import BookDetail from './pages/BookDetail';
 import Checkout from './pages/Checkout';
 import OrderSuccess from './pages/OrderSuccess';
+import TrackOrder from './pages/TrackOrder';
+import OrderHistory from './pages/OrderHistory';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import ShippingPolicy from './pages/ShippingPolicy';
+import ReturnPolicy from './pages/ReturnPolicy';
+import CancellationPolicy from './pages/CancellationPolicy';
 import { ShopProvider } from './context/ShopContext';
 import LoginModal from './components/LoginModal';
 import ScrollToTop from './components/ScrollToTop';
@@ -40,6 +47,13 @@ function App() {
               <Route path="/book/:id" element={<BookDetail />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/order-success" element={<OrderSuccess />} />
+              <Route path="/track-order" element={<TrackOrder />} />
+              <Route path="/order-history" element={<OrderHistory />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/shipping-policy" element={<ShippingPolicy />} />
+              <Route path="/return-policy" element={<ReturnPolicy />} />
+              <Route path="/cancellation-policy" element={<CancellationPolicy />} />
             </Routes>
           </main>
           <Footer />
