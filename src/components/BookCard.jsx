@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, ShoppingCart, Star } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import './BookCard.css';
@@ -10,7 +11,12 @@ const BookCard = ({ book }) => {
   return (
     <div className="book-card">
       <div className="book-cover-container">
-        <img src={book.image} alt={book.title} className="book-cover" />
+        <Link to={`/book/${book.id}`}>
+          <img src={book.image} alt={book.title} className="book-cover" />
+        </Link>
+        {book.isPublishedByUs && (
+          <div className="published-badge">Published by Book Hub</div>
+        )}
         <div className="book-actions">
           <button 
             className="action-btn wishlist-btn" 
@@ -23,7 +29,9 @@ const BookCard = ({ book }) => {
       </div>
       <div className="book-details">
         <span className="book-category">{book.category}</span>
-        <h3 className="book-title">{book.title}</h3>
+        <Link to={`/book/${book.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h3 className="book-title">{book.title}</h3>
+        </Link>
         <p className="book-author">{book.author}</p>
         <div className="book-meta">
           <div className="book-rating">

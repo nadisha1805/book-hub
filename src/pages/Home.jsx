@@ -14,6 +14,7 @@ const Home = () => {
   const [subscribed, setSubscribed] = useState(false);
 
   const bestSellers = books.filter(book => book.isBestSeller).slice(0, 4);
+  const publishedBooks = books.filter(book => book.isPublishedByUs);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -112,6 +113,19 @@ const Home = () => {
           </div>
           <div className="books-grid">
             {bestSellers.map(book => (
+              <BookCard key={book.id} book={book} />
+            ))}
+          </div>
+        </div>
+      {/* Our Published Books Section */}
+      <section className="section-padding bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Published Books</h2>
+            <Link to="/shop" className="view-all-link">Browse All <ArrowRight size={16} /></Link>
+          </div>
+          <div className="books-grid">
+            {publishedBooks.map(book => (
               <BookCard key={book.id} book={book} />
             ))}
           </div>

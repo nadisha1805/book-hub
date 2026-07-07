@@ -11,6 +11,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
+import FAQ from './pages/FAQ';
+import BookDetail from './pages/BookDetail';
 import { ShopProvider } from './context/ShopContext';
 import LoginModal from './components/LoginModal';
 import ScrollToTop from './components/ScrollToTop';
@@ -32,6 +34,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/wishlist" element={<Wishlist />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/book/:id" element={<BookDetail />} />
             </Routes>
           </main>
           <Footer />
