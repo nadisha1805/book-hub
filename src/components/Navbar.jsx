@@ -29,7 +29,7 @@ const Navbar = () => {
     <header className="navbar-header">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/images/logo.jpg" alt="Book Hub Logo" className="logo-img" />
+          <img src="/images/logo.jpeg" alt="Book Hub Logo" className="logo-img" />
           <span className="logo-tagline">Where stories connect.</span>
         </Link>
         
