@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-col">
           <div className="footer-logo">
             <img src="/images/logo.jpeg" alt="Book Hub Logo" className="logo-img" />
-            <p>Where stories connect. Your premium destination for the world's best books.</p>
+            <p>Connect &bull; Read &bull; Share. Your premium destination for the world's best books.</p>
           </div>
           <div className="social-icons">
             <a href="#" aria-label="Facebook">

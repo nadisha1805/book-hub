@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
           <img src="/images/logo.jpeg" alt="Book Hub Logo" className="logo-img" />
-          <span className="logo-tagline">Where stories connect.</span>
+          <span className="logo-tagline">Connect &bull; Read &bull; Share</span>
         </Link>
         
         <nav className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
