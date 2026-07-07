@@ -282,3 +282,66 @@
   justify-content: flex-end;
   gap: 1rem;
 }
+
+/* Badges (Global Admin) */
+.admin-badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+.badge-pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-processing {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.badge-shipped {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.badge-delivered {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.badge-cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Select */
+.admin-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: white;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.order-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.detail-group p {
+  margin: 0.25rem 0 0 0;
+  color: var(--text-light);
+}
+
+.detail-group.full-width {
+  grid-column: span 2;
+}
